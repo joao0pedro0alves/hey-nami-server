@@ -1,0 +1,48 @@
+{
+  "name": "backend-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "tsx watch -r dotenv/config src/server.ts",
+    "test": "vitest",
+    "test:build": "vitest run",
+    "build": "tsup src/server.ts",
+    "deploy": "echo \"Deploying new build to cloud server...\"",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@mermaid-js/mermaid-cli": "^9.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.4",
+    "prisma": "^4.10.1",
+    "prisma-erd-generator": "^1.2.5",
+    "tsup": "^6.6.3",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@prisma/client": "^4.10.1",
+    "@types/nodemailer": "^6.4.7",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.13.0",
+    "nodemailer": "^6.9.1",
+    "zod": "^3.20.6"
+  }
+}
