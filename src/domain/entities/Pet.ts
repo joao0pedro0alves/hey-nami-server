@@ -1,10 +1,10 @@
 import { Entity } from '../Entity';
 
-export type RegisteredAnimalKinds = 'cat' | 'dog'
+export type RegisteredPetKinds = 'cat' | 'dog'
 
 export interface PetProps {
     name: string;
-    kind: RegisteredAnimalKinds;
+    kind: RegisteredPetKinds;
     birthDate: Date;
     weightInGrams: number;
     bipedHeightInCentimeters: number;
