@@ -1,9 +1,46 @@
-# Back-end template
+# Hey Nami Server
 
+<p>
+Aplicativo para controle de despesas, alimentação, 
+medicação obrigatória, passeios, banhos e demais informações dos seus animais de estimação.
+</p>
+
+### ANIMAL
+
+* Deve ser possivel direcionar tarefas especificas de cada familiar para cada animal.
+* Iniciar com suporte para Cachorros e Gatos
+* Deve guardar as informações basicas do seu animal de estimação como:
+
+  - Nome
+  - Sexo
+  - Idade
+  - Especie
+  - Peso
+  - Altura
+  - Foto: futuramente criar um modelo 3D do animal, usando pelagens pré montadas
+  - Conexão com o rastrador instalado no animal
+
+* Criar um cadastro de exames e remedios obrigatórios por especie, como o vermifogo, vacina de raiva, castração e etc.
+
+* Criar lembretes para os exames e doses de ração diárias, além de um lembrete mensal para a compra de ração.
+
+### FAMILIAR
+
+* Cadastrar membros da familia, guardando informações de:
+
+- Nome
+- Email, além das notificações, será enviado um email para o familiar associado ao Animal
+- Avatar
+
+<br/>
+
+
+# Tecnologies
 
 <p align="center">
     Setup backend Node usando princípios de SOLID<br>
-    <br><strong>Veja as principais tecnologias abaixo</strong><table>
+    <br><strong>Veja as principais tecnologias abaixo</strong>
+<table>
     <thead>
         <tr>
             <th align="center">
