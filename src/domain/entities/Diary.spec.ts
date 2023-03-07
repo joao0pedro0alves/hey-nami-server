@@ -2,11 +2,11 @@ import { expect, test } from "vitest";
 import { Cat } from "./pets/Cat";
 import { Dog } from "./pets/Dog";
 import { Diary } from "./Diary";
-import { Tutor } from "./Tutor";
+import { FamilyMember } from "./FamilyMember";
 
 test('create a Diary', () => {
 
-    const diaryOwner = new Tutor({
+    const diaryOwner = new FamilyMember({
         avatarUrl: null,
         email: 'jhon@doe@gmail.com',
         name: 'Jhon Doe'
@@ -37,7 +37,7 @@ test('create a Diary', () => {
     })
 
     expect(diary).toBeInstanceOf(Diary)
-    expect(diary.owner).toBeInstanceOf(Tutor)
+    expect(diary.owner).toBeInstanceOf(FamilyMember)
     expect(diary.owner.props.name).toEqual('Jhon Doe')
 
     expect(diary.family.length).toEqual(1)

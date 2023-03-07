@@ -1,11 +1,11 @@
 import { Entity } from "../Entity";
 import { Pet } from "./Pet";
-import { Tutor } from "./Tutor";
+import { FamilyMember } from "./FamilyMember";
 
 export interface DiaryProps {
-    owner: Tutor;
+    owner: FamilyMember;
     pets: Pet[];
-    family: Tutor[];
+    family: FamilyMember[];
     createdAt?: Date;
 }
 
