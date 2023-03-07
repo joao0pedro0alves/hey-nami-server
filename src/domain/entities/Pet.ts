@@ -2,7 +2,7 @@ import { Entity } from '../Entity';
 
 export type RegisteredAnimalKinds = 'cat' | 'dog'
 
-export interface AnimalProps {
+export interface PetProps {
     name: string;
     kind: RegisteredAnimalKinds;
     birthDate: Date;
@@ -12,8 +12,8 @@ export interface AnimalProps {
     photoUrl: string;
 }
 
-export class Animal extends Entity<AnimalProps> {
-    constructor(props: AnimalProps, id?: string) {
+export class Pet extends Entity<PetProps> {
+    constructor(props: PetProps, id?: string) {
         super(props, id)
     }
 

@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import { Cat } from "./animals/Cat";
-import { Dog } from "./animals/Dog";
+import { Cat } from "./pets/Cat";
+import { Dog } from "./pets/Dog";
 import { Diary } from "./Diary";
 import { Tutor } from "./Tutor";
 

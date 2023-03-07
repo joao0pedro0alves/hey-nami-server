@@ -1,8 +1,8 @@
 import { expect, test } from 'vitest';
-import { Animal } from './Animal';
+import { Pet } from './Pet';
 
 test('create an Animal', () => {
-    const animal = new Animal({
+    const animal = new Pet({
         name: 'Nami',
         kind: 'cat',
         birthDate: new Date(),
@@ -12,7 +12,7 @@ test('create an Animal', () => {
         photoUrl: '',
     });
 
-    expect(animal).toBeInstanceOf(Animal);
+    expect(animal).toBeInstanceOf(Pet);
     expect(animal.props.kind).toEqual('cat');
     
     expect(animal.calculateMonthlyFeedConsumptionImGrams).toThrow();
