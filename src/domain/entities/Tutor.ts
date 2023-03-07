@@ -3,7 +3,7 @@ import { Entity } from '../Entity';
 export interface TutorProps {
     name: string;
     email: string;
-    avatarUrl: string;
+    avatarUrl: string | null;
 }
 
 export class Tutor extends Entity<TutorProps> {

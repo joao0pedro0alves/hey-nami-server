@@ -5,7 +5,7 @@ test('create an Animal', () => {
     const animal = new Animal({
         name: 'Nami',
         kind: 'cat',
-        monthsOld: 6,
+        birthDate: new Date(),
         weightInGrams: 300,
         bipedHeightInCentimeters: 40,
         quadrupedHeightInCentimeters: 20,

@@ -5,7 +5,7 @@ export type RegisteredAnimalKinds = 'cat' | 'dog'
 export interface AnimalProps {
     name: string;
     kind: RegisteredAnimalKinds;
-    monthsOld: number;
+    birthDate: Date;
     weightInGrams: number;
     bipedHeightInCentimeters: number;
     quadrupedHeightInCentimeters: number;
