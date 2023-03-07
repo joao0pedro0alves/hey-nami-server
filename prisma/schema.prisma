@@ -10,10 +10,43 @@ generator erd {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-model Example {
-  id String @id @default(uuid())
+model Diary {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  pets   Pet[]
+  family FamilyMember[]
+
+  @@map("diaries")
+}
+
+model FamilyMember {
+  id    String @id @default(uuid())
+  name  String
+  email String @unique
+
+  diary_id String
+  Diary    Diary  @relation(fields: [diary_id], references: [id])
+
+  @@map("family_members")
+}
+
+model Pet {
+  id                           String   @id @default(uuid())
+  name                         String
+  kind                         String
+  birthDate                    DateTime
+  weightInGrams                Int
+  bipedHeightInCentimeters     Int
+  quadrupedHeightInCentimeters Int
+  photoUrl                     String
+
+  diary_id String
+  Diary    Diary  @relation(fields: [diary_id], references: [id])
+
+  @@map("pets")
 }
