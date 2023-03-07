@@ -8,15 +8,12 @@ export class CreateDiaryController {
     async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     
         const owner = new FamilyMember({
-            avatarUrl: null,
             email: 'jhon@doe.com',
             name: 'Jhon Doe',
         });
 
         await this.createDiaryUseCase.execute({
             owner,
-            family: [],
-            pets: [],
         });
 
         return reply.status(201).send();

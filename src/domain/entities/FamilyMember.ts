@@ -3,7 +3,6 @@ import { Entity } from '../Entity';
 export interface FamilyMemberProps {
     name: string;
     email: string;
-    avatarUrl: string | null;
 }
 
 export class FamilyMember extends Entity<FamilyMemberProps> {

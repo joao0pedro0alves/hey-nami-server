@@ -1,19 +1,18 @@
 import { Diary, DiaryProps } from "../../../domain/entities/Diary"
 import { DiariesRepository } from "../../../infra/database/repositories/diaries-repository"
 
-type CreateDiaryRequest = Omit<DiaryProps, 'createdAt'>
+type CreateDiaryRequest = {
+    owner: DiaryProps['owner']
+}
+
 type CreateDiaryResponse = Diary
 
 export class CreateDiary {
      constructor(private diariesRepository: DiariesRepository) {}
 
-     async execute({ owner, family, pets }: CreateDiaryRequest): Promise<CreateDiaryResponse> {
+     async execute({ owner }: CreateDiaryRequest): Promise<CreateDiaryResponse> {
 
-        const diary = new Diary({
-            owner,
-            family,
-            pets,
-        })
+        const diary = new Diary({ owner })
 
         await this.diariesRepository.create(diary)
 

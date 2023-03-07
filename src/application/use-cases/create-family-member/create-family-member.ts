@@ -10,9 +10,8 @@ export class CreateFamilyMember {
     async execute({
         name,
         email,
-        avatarUrl,
     }: CreateFamilyMemberRequest): Promise<CreateFamilyMemberResponse> {
-        const familyMember = new FamilyMember({ name, email, avatarUrl });
+        const familyMember = new FamilyMember({ name, email });
 
         await this.familyMembersRepository.create(familyMember)
 

@@ -15,15 +15,12 @@ describe('Create diary', () => {
         const createFamilyMember = new CreateFamilyMember(familyMembersRepository)
 
         const owner = await createFamilyMember.execute({
-            avatarUrl: null,
             email: 'jhon@doe.com',
             name: 'Jhon Doe'
         })
 
         const diary = await createDiary.execute({
             owner,
-            family: [],
-            pets: []
         })
 
         expect(diary).toBeInstanceOf(Diary)

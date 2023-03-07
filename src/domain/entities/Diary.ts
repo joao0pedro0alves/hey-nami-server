@@ -4,15 +4,19 @@ import { FamilyMember } from "./FamilyMember";
 
 export interface DiaryProps {
     owner: FamilyMember;
-    pets: Pet[];
-    family: FamilyMember[];
+    pets?: Pet[];
+    family?: FamilyMember[];
     createdAt?: Date;
 }
 
 export class Diary extends Entity<DiaryProps> {
-    constructor(props: DiaryProps, id?: string) {
-        props.createdAt = new Date()
-        props.family.push(props.owner)
+    constructor(props: DiaryProps, id?: string) {       
+        
+        if (!id) {
+            props.createdAt = new Date()
+            props.family = [props.owner]
+            props.pets = []
+        }
         
         super(props, id)
     }

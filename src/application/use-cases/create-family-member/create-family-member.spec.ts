@@ -11,7 +11,6 @@ describe('Create Fmily Member', () => {
 
         expect(
             createFamilyMember.execute({
-                avatarUrl: null,
                 email: 'jhon@doe.com',
                 name: 'Jhon Doe'
             })
