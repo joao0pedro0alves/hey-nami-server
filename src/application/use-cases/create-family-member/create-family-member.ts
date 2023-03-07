@@ -1,4 +1,4 @@
-import { FamilyMember, FamilyMemberProps} from '../../../domain/entities/FamilyMember';
+import { FamilyMember, FamilyMemberProps } from '../../../domain/entities/FamilyMember';
 import { FamilyMembersRepository } from '../../../infra/database/repositories/family-members-repository';
 
 type CreateFamilyMemberRequest = FamilyMemberProps;
